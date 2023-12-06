@@ -1,7 +1,58 @@
+Linear equation:
+    A linear equation is an equation in which the highest power of the variable is always 1
+    
 Linear Algebra:
+    Study of linear equation
     System of sentences:
         - Complete(Non-singular):
+            Unique solution
         - Redundant(Singular):
+            Infinite solutions
             Rank:
-                Measure of how redundant a system is.
+                Measure of how redundant a system is
         - Contradictory(Singular):
+            No solution
+    
+    System of equations as lines:
+        Slope:
+    
+    Geometric notion of singularity:
+        the geometric interpretation of these systems will be pairs of lines that go through the origin
+        by making the constants as zero
+        So the constants is not important when determining whether the system is singular or Non-singular
+    
+    Matrix:
+        Singular system:
+            -[1, 1]
+            -[2, 2]
+            second row is a multiple of the first row
+            Rows are linearly dependent:
+        Non-singular system:
+            -[1, 1]
+            -[1, 2]
+            No row is a multiple of the other one
+            Rows are linearly independent:
+        
+    Determinant:
+        0        - Singular
+        non-zero - Non-singular
+        Formulation:
+            For a singular system:
+            -[a, b]
+            -[c, d]
+
+            [a, b] * k = [c, d]
+
+            ak = c
+            bk = c
+
+            c/a = d/b = k
+
+            ad = bc
+
+            ad - bc = 0
+
+            ad - bc is Determinant
+
+
+    
