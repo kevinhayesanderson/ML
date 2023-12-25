@@ -1,0 +1,148 @@
+{
+  "main": {
+    "id": "401129261737131e",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3ce84a1be0aa94c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cc1623700f776b22",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "819bce7b5737af37",
+    "type": "split",
+    "children": [
+      {
+        "id": "400a35ac2f8544eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b974ac3c8bc72f4b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "69b167d8a72c6d32",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b2b81e12ea534e6f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6bb10f073b251b9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "11793c4bcd7b4c60",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3524400a184454fe",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6d4eb296d1a30a7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "354a53e5f1f6ccbd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b9035d4f26a2c3b4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "cc1623700f776b22",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "2023-12-13.md",
+    "Math/Linear Algebra/P8uMS3oYSumhsZUJPLcJ-Q_8032d8f134064017b63bd7d7ed1fddf1_C1_W1.pdf",
+    "Untitled"
+  ]
+}

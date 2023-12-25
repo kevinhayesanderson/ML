@@ -118,3 +118,27 @@ Linear Algebra:
         Reduced row echelon form   
         [1, 0]
         [0, 1]
+
+Vectors:
+    Normalization:
+        
+        L1 Norm:
+        L2 Norm:
+    Sum of Vectors:
+    Difference of Vectors:
+    Distance between Vectors:
+        L1 Distance:
+        L2 Distance:
+        Cosine Distance:
+    Multiplication by a Scalar:
+    Dot Product:
+        L2 Norm = Sqrt(dot product(u,u))
+        Geometric Dot Product:
+            two vectors are orthogonal if and only if the dot product is zero
+            The dot product between two perpendicular or orthogonal vectors is always zero
+    Multiplying a matrix by a vector:
+
+Linear Transformations:
+    Non-Singular matrix always has an inverse
+    Singular matrix never has an inverse
+    Threshold and bias
