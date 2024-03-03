@@ -1,0 +1,255 @@
+Linear equation: A linear equation is an equation in which the highest power of the variable is always 1
+
+Linear Algebra:
+  Study of linear equation:
+  System of sentences:
+    - Complete(Non-singular):
+        Unique solution:
+    - Redundant(Singular):
+        Infinite solutions:
+        Rank: Measure of how redundant a system is
+    - Contradictory(Singular):
+        No solution:
+
+  System of equations as lines:
+    Slope:
+
+  Geometric notion of singularity:
+    the geometric interpretation of these systems will be pairs of lines that go through the origin
+    by making the constants as zero
+    So the constants is not important when determining whether the system is singular or Non-singular
+
+Matrix:
+  Singular system:
+    - [1, 1]
+    - [2, 2]
+    - second row is a multiple of the first row
+    - Rows are linearly dependent:
+  Non-singular system:
+    - [1, 1]
+    - [1, 2]
+    - No row is a multiple of the other one
+    - Rows are linearly independent:
+
+  Determinant:
+    0        - Singular:
+    non-zero - Non-singular:
+    Formulation:
+    For a singular system: -[a, b]
+      -[c, d]
+
+      [a, b] * k = [c, d]
+
+      ak = c
+      bk = c
+
+      c/a = d/b = k
+
+      ad = bc
+
+      ad - bc = 0
+
+      ad - bc is Determinant
+
+  System of equations(3*3):
+    System of equations as planes (3x3): Plane in 3d axis
+      - Three points defines a plane
+    Linear dependence and independence (3x3):
+    The determinant (3x3):
+      - if the values below or above the main diagonal are zero,
+      - the determinant is product of the main diagonal
+
+  Matrix row-reduction: also known as Gaussian elimination
+    5a + b = 17
+    4a + 3b = 6
+
+    [5, 1]
+    [4, 3]
+    Determinant = 11
+
+    Switch rows
+
+    [4, 3]
+    [5, 1]
+    Determinant = -11
+
+    upper diagonal matrix(row echelon form)
+    [1, 0.2]    [1, 0.2]    [0, 0]
+    [0, 1]      [0, 0]      [0, 0]
+
+  ? Row operations that do not change the singularity or non-singularity of the matrix
+  : Adding a row to another one.
+    Multiplying a row by a nonzero scalar.
+    Switching rows.
+
+  Rank of a matrix: The amount of information the system carries is called rank
+    Singular value decomposition or SVD which reduces the rank of the matrix
+
+    Rank = (no of rows) - (dimension of the solution space)
+    If Rank == No of rows then singular matrix
+    If Rank < No of rows then non-singular matrix
+
+  Row echelon form:
+    The rank of a matrix is the number of ones in the diagonal of the row echelon form.
+    [1, 0.2]    [1, 0.2]    [0, 0]
+    [0, 1]      [0, 0]      [0, 0]
+    Rank 2      Rank 1      Rank 0
+
+    In every row that is non-zero has a leftmost non-zero entry are called the pivots.
+    every pivot has to be strictly to the right of the pivots of the row above.
+
+  Reduced row echelon form: 5a + b = 17
+    4a - 3b = 6
+
+    [5, 1]
+    [4, -3]
+
+    row echelon form
+    [1, 0.2]
+    [0, 1]
+
+    Reduced row echelon form
+    [1, 0]
+    [0, 1]
+
+Vectors:
+  Normalization:
+    L1 Norm:
+    L2 Norm:
+  Sum of Vectors:
+  Difference of Vectors:
+  Distance between Vectors:
+    L1 Distance:
+    L2 Distance:
+    Cosine Distance:
+  Multiplication by a Scalar:
+  Dot Product:
+    - L2 Norm = Sqrt(dot product(u,u))
+    - Geometric Dot Product:
+        two vectors are orthogonal if and only if the dot product is zero
+        The dot product between two perpendicular or orthogonal vectors is always zero
+  Multiplying a matrix by a vector:
+
+Linear Transformations:
+  Link: https://www.khanacademy.org/math/linear-algebra
+  Non-Singular matrix always has an inverse:
+  Singular matrix never has an inverse:
+  Threshold and bias:
+  Singularity and rank of linear transformations:
+    - in linear transformation, the dimension of the data is Reduced -> (rank is reduced)
+    - For Non-singular matrix the linear transformation sends the initial plane to a transformed plane:
+    - ? For Singular matrix the linear transformation sends the initial plan to a single line(degenerate parallelogram) or a point
+      : - https://en.wikipedia.org/wiki/Degeneracy_(mathematics)
+    - Determinant as an area:
+        the determinant of the matrix is the area of the image of the fundamental basis formed by the unit square
+        Non-Singular -> (Determinant != 0) -> (Area != 0)
+        Singular -> (Determinant = 0) -> (Area = 0)
+    - Determinant of a product of matrices: det(AB) = det(A)det(B)
+    - Determinants of inverses:
+        the determinant of an inverse matrix is the inverse of the determinant of the matrix.
+        det(A^-1) = 1/det(A)
+    - Inverse of the Matrix using Determinant:
+        For 2*2 matrix: A = [ a d ]
+          [ c d ]
+
+          A^-1 = 1/det(A) * [ d -b ]
+          [ -c a ]
+        For 3*3 matrix: A = [ a11 a12 a13 ]
+          [ a21 a22 a23 ]
+          [ a31 a32 a33 ]
+
+          cofactors = [ +(a22a33-a23a32) -(a13a32-a12a33) +(a12a23-a13a22) ]
+          [ -(a23a31-a21a33) +(a11a33-a13a31) -(a13a21-a11a23) ]
+          [ +(a21a32-a22a31) -(a12a31-a11a32) +(a11a22-a12a21) ]
+
+          Adjoint(A) = Transpose(cofactors)
+
+          A^-1 = 1/det(A) * Adjoint(A)
+  Bases:
+    - Two vectors
+    - vectors from the origin
+    - The main property of a basis is that every point in the space can be expressed as a linear combination of elements in the basis.
+    - Non-Basis: Two vectors in the same direction
+  Span:
+    The span of a set of vectors is simply the set of points that can be reached by walking in the direction of these vectors in any combination.
+    basis needs to be a minimal spanning set.
+  Number of elements in the basis is the dimension of the space:
+  Linear Span:
+  Eigenbases: The two vectors in the basis are gonna be called the eigenvectors and the stretching factor, the two and the three, are going to be called eigenvalues.
+
+Calculus:
+  Derivatives:
+    - A derivative is the instantaneous rate of change of a function.
+    - slope = rise / run
+    - the instantaneous rate of change at a point is the slope of that tangent line at the point
+    - if the tangent has zero slope, the rate of change is zero
+    - Derivatives and their notation:
+        Lagrange's notation: f′(x) #called f prime
+        Leibniz's notation: dy/dx = d/dx(f(x))
+    - Derivative of Quadratic Function: y = f(x) = x²
+        slope = Δ(f)/Δ(x) = 2x + Δ(x)
+        derivative = df/dx = 2x #since the Δ(x) is infinitesimally small or zero
+    - Derivatives of higher degree polynomials:
+        Cubic: y = f(x) = x^3
+          slope = Δ(f)/Δ(x) = Δ(x)² + 3x(x+ Δ(x))
+          derivative = df/dx = 3x² #since the Δ(x) is infinitesimally small or zero
+        Inverse: y = f(x) = x^-1 = 1/x
+          slope = Δ(f)/Δ(x) = -1/(x² + xΔx)
+          derivative = df/dx = -1/x² #since the Δ(x) is infinitesimally small or zero
+        General: y = f(x) = x^n
+          derivative = df/dx = nx^(n-1) #since the Δ(x) is infinitesimally small or zero
+    - Inverse function and its derivative: if f and g are inverse functions, then the derivative of g is 1 over the derivative of f.
+    - Derivative of trigonometric functions:
+    - Meaning of the Exponential (e): Euler's number
+        numerical value 2.71828182....
+        (1 + 1/n)^n
+        f(x) = e^x
+        slope = e²
+        derivative = e^x
+    - Derivative of log(x): log(x) is the inverse of e^x
+        derivative = 1/x
+    - Existence of the Derivatives:
+        - For the functions where you cannot find the derivative at every point are called non differentiable functions.
+        - When a function has a corner aor a cusp, the function is not differentiable at the point.
+        - If there is a discontinuity/jump, the derivative does not exist.
+        - If the tangent ata point is vertical to the y-axis(slope of a vertical line is infinity)
+        - eg of Non differentiable function:
+            - abs(x), at x = 0, te derivative doesn't exist
+    - Properties of the derivative:
+        Multiplication by scalars: if f is equal to c times g, then f prime is equal to c times g prime.
+        Sum rule:
+          if f is the sum of two functions g and h, then the derivative of f is derivative of g plus the derivative of h.
+          f(x) = g(x) + h(x)
+          f′(x) = g′(x) + h′(x)
+        Product rule: f(x) = g(x)h(x)
+          f′(x) = g′(x)h(x) + g(x)h′(x)
+        Chain rule:
+          - f(t) = g(h(t))
+          - df/dt = dg/dh * dh/dt #Leibniz's notation
+          - f′(t) = g′(h(t)) + h′(t) #Lagrange's notation
+  Optimization:
+    - the main application here in machine learning of derivatives is that they are used for optimization.
+    - Optimization is when you want to find the maximum or the minimum value of a function.
+    - Optimization of squared loss:
+    - Optimization of log-loss:
+  Gradients:
+    Tangent planes:
+    Partial Derivatives:
+    Gradient is  the vector containing the partial derivatives: nabla f, and that's just the collection of all the partial derivatives with respect to all the variables in the function.
+    Gradients and maxima/minima:
+  Gradient Descent:
+    - the method that is iterative and that is really powerful for minimizing or maximizing functions, especially in many variables, the method is called gradient descent.
+    - The learning rate ensures that the steps we are performing are small enough so the algorithm can converge to the minimum.
+    - Optimization using Gradient Descent in one variable:
+    - Optimization using Gradient Descent in two variables:
+
+Optimization in Neural Networks and Newton's Method:
+  Neural Networks:
+  Regression with a perceptron:
+    Loss function:
+  Classification with Perceptron:
+    Sigmoid function:
+  Newton's Method:
+    Second derivative:
+      Curvature:
+    Hessian: For multiple variables, the second derivative is actually a matrix full of second derivatives called the Hessian.
